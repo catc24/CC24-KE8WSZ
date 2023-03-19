@@ -10,13 +10,21 @@
 <head>
 	<title>Centered Image</title>
 	<style>
-		img {
-			display: block;
-			margin: 0 auto;
-			border-radius: 50%;
-			width: 270px;
-		}
-	</style>
+  img {
+    display: block;
+    margin: 100px auto 0; 
+    border-radius: 50%;
+    width: 270px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    img {
+      width: 60%;
+       margin: 200px auto 0; 
+    }
+  }
+</style>
 </head>
 <body>
 	<img src="https://pbs.twimg.com/media/DFmlfv5XYAAvTe7?format=jpg&name=large" alt="Image">
@@ -170,6 +178,7 @@
     .button-container {
       display: flex;
       flex-direction: column;
+       align-items: center;
     }
 
     button {
@@ -362,11 +371,15 @@
   button {
     font-size: 1.2rem;
     padding: 8px 20px;
+     width: 250px;
   }
 
   .button-container {
     flex-direction: column;
     gap: 20px;
+
+
+   
   }
 }
 
